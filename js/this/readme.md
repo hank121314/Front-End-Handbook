@@ -86,7 +86,7 @@ var object = {
 object.func(); // I am global
 ```
 
-In this example, we assign name to `global` , so `this` inherits from the function context which is `global` and its name is `'I am global'`.
+In this example, we assign name to `global` , so `this` inherits from the function context `this` which is `global` and its name is `'I am global'`.
 The console will output `'I am global'`.
 
 ### Event Listener
@@ -123,7 +123,7 @@ checkbox.addEventListener('click', function (e) {
 ### Tips
 
 - regardless of how we call the arrow function, `this` in the arrow function will never change.
-- The only a new object will create a new `this` (otherwise `this` is `global`/`window`).
+- Only new object will create a new `this` (otherwise `this` is `global`/`window`).
 
 ### Reference
 
