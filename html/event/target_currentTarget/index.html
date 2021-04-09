@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div>
+      <label id="lb"> Label <input type="checkbox" name="chkbox" id="chkbox" /> </label>
+    </div>
+  </body>
+
+  <script>
+    var label = document.querySelector('#lb');
+    var checkbox = document.querySelector('#chkbox');
+
+    label.addEventListener('click', function (e) {
+      console.log('Target. ', e.target.tagName); // Will console 'LABEL' when capturing, console 'INPUT' when bubbling
+      console.log('currentTarget. ', e.currentTarget.tagName); // LABEL
+    });
+
+    checkbox.addEventListener('click', function (e) {
+      console.log('Target. ', e.target.tagName); // INPUT
+      console.log('currentTarget. ', e.currentTarget.tagName); // INPUT
+    });
+  </script>
+</html>

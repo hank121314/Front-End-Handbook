@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <ul id="list">
+      <li id="list_item">
+        <a id="list_item_link" target="_blank" href="http://google.com"> google.com </a>
+      </li>
+    </ul>
+  </body>
+  <script>
+    const ul = document.querySelector("#list")
+    const li = document.querySelector("#list_item")
+    const a = document.querySelector("#list_item_link")
+
+    const phase = {
+      1: 'Capture',
+      2: 'At Target',
+      3: 'Bubble'
+    }
+
+    ul.addEventListener('click', function (event) {
+      console.log('list bubble phase', phase[event.eventPhase]);
+    }, false);
+    ul.addEventListener('click', function (event) {
+      event.preventDefault();
+      console.log('list capture phase', phase[event.eventPhase]);
+    }, true);
+
+    li.addEventListener('click', function (event) {
+      console.log('list_item bubble phase', phase[event.eventPhase]);
+    }, false);
+    li.addEventListener('click', function (event) {
+      console.log('list_item capture phase', phase[event.eventPhase]);
+    }, true);
+
+    a.addEventListener('click',function (event) {
+      console.log('list_item_link bubble phase', phase[event.eventPhase]);
+    }, false);
+    a.addEventListener('click', function (event) {
+      console.log('list_item_link capture phase', phase[event.eventPhase]);
+    }, true);
+  </script>
+</html>
