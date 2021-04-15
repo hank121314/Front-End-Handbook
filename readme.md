@@ -38,5 +38,10 @@ It will give you some tips to conquer the pain of learning programming.
 ### Operator
 - [bitwise](C++/operator/bitwise/readme.md)
 
+## Rust
+
+### trait
+- [Send & Sync](Rust/Send%20&%20Sync/readme.md)
+
 ## Common
-- [dynamic scope and lexical scope](common/dynamic%20scope%20and%20lexical%20scope/readme.md)
+- [Dynamic scope and lexical scope](common/dynamic%20scope%20and%20lexical%20scope/readme.md)

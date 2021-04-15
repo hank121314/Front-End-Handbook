@@ -4,7 +4,6 @@
 
 In JavaScript, a variable can be declared after it has been used.  
 
-
 ### Rule
 
 1. function > variable
